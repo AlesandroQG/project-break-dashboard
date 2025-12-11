@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* my styles */
+:root {
+    --font-family: "Lato", sans-serif;
+    --light: 300;
+    --regular: 400;
+    --bold: 700;
+}
+
+/* general */
+.hide {
+    visibility: hidden;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: var(--font-family);
+    font-weight: var(--regular);
+    transition: background-image 0.25s ease-in-out;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.518);
+    padding: 10px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: greenyellow;
+}
+
+#menu:hover {
+    cursor: pointer;
+}
+
+#menuList {
+    position: absolute;
+    right: 5px;
+    top: 90px;
+    background-color: rgba(0, 0, 0, 0.518);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: right;
+    display: none;
+}
+
+#menuList a.current {
+    color: rgba(255, 255, 255, 0.634);
+    cursor: default;
+}
+
+.main {
+    background-color: rgba(0, 0, 0, 0.518);
+    padding: 10px;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.bold {
+    font-weight: var(--bold);
+}
+
+/* index */
+.main-container {
+    display: flex;
+    height: 90vh;
+}
+
+.left-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.main-box {
+    background-color: rgba(0, 0, 0, 0.518);
+    padding: 10px;
+    border-radius: 25px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.main-box .weather, .main-box .contrasenias, .main-box .links {
+    width: 100%;
+    max-height: 100%;
+}
+
+/* reloj */
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#hora {
+    font-weight: var(--bold);
+    font-size: 25px;
+}
+
+#fecha {
+    font-weight: var(--light);
+}
+
+#mensaje {
+    font-size: 20px;
+}
+
+/* generador contraseñas */
+.contrasenias {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contrasenias h2 {
+    font-weight: var(--bold);
+    font-size: 20px;
+}
+
+#generar {
+    width: 150px;
+    background-color: green;
+    border: 0;
+    color: white;
+    border-radius: 10px;
+    font-weight: var(--bold);
+}
+
+#generar:hover {
+    background-color: rgb(185, 255, 185);
+    color: black;
+    cursor: pointer;
+}
+
+/* listado links */
+.links .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links h2 {
+    font-weight: var(--bold);
+    font-size: 20px;
+}
+
+#guardar {
+    width: 150px;
+    background-color: green;
+    border: 0;
+    color: white;
+    border-radius: 10px;
+    font-weight: var(--bold);
+}
+
+#guardar:hover {
+    background-color: rgb(185, 255, 185);
+    color: black;
+    cursor: pointer;
+}
+
+.listado {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.listado li {
+    padding: 10px;
+    background-color: black;
+    border-radius: 25px;
+}
+
+.listado .delete {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+
+.listado .delete:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.listado a {
+    text-decoration: none;
+    color: white;
+}
+
+.listado a:hover {
+    color: rgb(185, 255, 185);
+    cursor: pointer;
+}
+
+/* estación meteorológica */
+.weather {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#location {
+    font-weight: var(--bold);
+    font-size: 20px;
+}
+
+#current-weather {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#current-weather>div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#current-weather>div:first-child>p {
+    font-weight: var(--bold);
+    font-size: 25px;
+}
+
+#current-weather>div:last-child {
+    font-weight: var(--light);
+}
+
+#forecast {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+#forecast div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#forecast img {
+    width: 75px;
+}

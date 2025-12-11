@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estación meteorológica</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+    <div class="navigation">
+        <a href="../index.html">&larr; Atras</a>
+        <div class="clock-container">
+            <h1 id="hora"></h1>
+            <h2 id="fecha"></h2>
+            <p id="mensaje"></p>
+        </div>
+        <a id="menu">&darr; Menú</a>
+        <ul id="menuList">
+            <li><a href="../pages/reloj.html">Reloj</a></li>
+            <li><a href="../pages/generador_contrasenias.html">Generador de contraseñas</a></li>
+            <li><a href="#" class="current">Estación meteorológica</a></li>
+            <li><a href="../pages/listado_links.html">Listado de links</a></li>
+        </ul>
+    </div>
+    <div class="main weather">
+        <div id="location"></div>
+        <div id="current-weather"></div>
+        <div id="forecast"></div>
+    <script src="../js/app.js"></script>
+    <script src="../js/reloj.js"></script>
+    <script src="../js/estacion_meteorologica.js"></script>
+</body>
+</html>

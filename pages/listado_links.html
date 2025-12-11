@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de links</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+    <div class="navigation">
+        <a href="../index.html">&larr; Atras</a>
+        <div class="clock-container">
+            <h1 id="hora"></h1>
+            <h2 id="fecha"></h2>
+            <p id="mensaje"></p>
+        </div>
+        <a id="menu">&darr; Menú</a>
+        <ul id="menuList">
+            <li><a href="../pages/reloj.html">Reloj</a></li>
+            <li><a href="../pages/generador_contrasenias.html">Generador de contraseñas</a></li>
+            <li><a href="../pages/estacion_meteorologica.html">Estación meteorológica</a></li>
+            <li><a href="#" class="current">Listado de links</a></li>
+        </ul>
+    </div>
+    <div class="main links">
+        <div class="form">
+            <h2>Listado de links</h2>
+            <input type="text" id="nombre-link" placeholder="Nombre de la página web" required>
+            <input type="url" id="url-link" placeholder="Enlace de la página web" required>
+            <button id="guardar">Guardar</button>
+        </div>
+        <ul class="listado" id="listado"></ul>
+    </div>
+    <script src="../js/app.js"></script>
+    <script src="../js/reloj.js"></script>
+    <script src="../js/listado_links.js"></script>
+</body>
+</html>

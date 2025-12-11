@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de contraseñas</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+    <div class="navigation">
+        <a href="../index.html">&larr; Atras</a>
+        <div class="clock-container">
+            <h1 id="hora"></h1>
+            <h2 id="fecha"></h2>
+            <p id="mensaje"></p>
+        </div>
+        <a id="menu">&darr; Menú</a>
+        <ul id="menuList">
+            <li><a href="../pages/reloj.html">Reloj</a></li>
+            <li><a href="#" class="current">Generador de contraseñas</a></li>
+            <li><a href="../pages/estacion_meteorologica.html">Estación meteorológica</a></li>
+            <li><a href="../pages/listado_links.html">Listado de links</a></li>
+        </ul>
+    </div>
+    <div class="main contrasenias">
+        <h2>Crea tu contraseña segura</h2>
+        <div>
+            <label for="caracteres">Numero de caracteres de la contraseña:</label>
+            <input type="number" id="caracteres" min="12" max="50" value="12" required>
+        </div>
+        <button id="generar">Generar Contraseña</button>
+        <div id="resultado"></div>
+    </div>
+    <script src="../js/app.js"></script>
+    <script src="../js/reloj.js"></script>
+    <script src="../js/generador_contrasenias.js"></script>
+</body>
+</html>
