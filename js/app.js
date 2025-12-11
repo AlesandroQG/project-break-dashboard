@@ -8,7 +8,7 @@ let menuToggle = false;
 
 const setBackground = () => {
     const num = Math.floor(Math.random() * 10 + 1);
-    document.body.style.backgroundImage = `url("../media/img/bg-${num}.jpg")`;
+    document.body.style.backgroundImage = `url("./media/img/bg-${num}.jpg")`;
 };
 
 setInterval(setBackground, 15000);
